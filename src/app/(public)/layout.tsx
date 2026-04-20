@@ -1,20 +1,18 @@
 /**
- * app/(public)/layout.tsx — Public 레이아웃
+ * app/(public)/layout.tsx - Public Layout
  *
- * [학습 포인트]
- * route group `(public)`: 괄호로 묶어서 URL에 영향 없이 레이아웃만 분리.
- * /rooms 와 / 가 서로 다른 레이아웃을 쓰려면 route group이 필요하다.
- *
- * Next.js 공식: route group은 URL 변경 없이 폴더 구조를 정리하는 용도.
+ * route group `(public)`은 URL에 영향을 주지 않고 레이아웃만 분리한다.
  */
+
+import styles from "./layout.module.css";
 
 export default function PublicLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col">
-      <header className="border-b border-slate-200 bg-white px-6 py-4">
-        <span className="text-lg font-bold text-indigo-600">IssuePulse</span>
+    <div className={styles.shell}>
+      <header className={styles.header}>
+        <span className={styles.logo}>IssuePulse</span>
       </header>
-      <main className="flex-1">{children}</main>
+      <main className={styles.main}>{children}</main>
     </div>
   );
 }

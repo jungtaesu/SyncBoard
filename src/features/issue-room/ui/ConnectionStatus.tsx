@@ -1,21 +1,21 @@
 /**
- * ConnectionStatus — Client Component
+ * ConnectionStatus - Client Component
  *
- * WebSocket 연결 상태 표시 배지.
- * 상단 레이아웃에 고정하면 연결 상태를 항상 볼 수 있다.
+ * WebSocket 연결 상태를 표시한다.
  */
 
 "use client";
 
+import styled, { css, keyframes } from "styled-components";
 import { useSocketStore, type SocketStatus } from "@/shared/stores/socket-store";
 
-const STATUS_CONFIG: Record<SocketStatus, { label: string; color: string; dot: string }> = {
-  idle: { label: "대기", color: "text-slate-500", dot: "bg-slate-300" },
-  connecting: { label: "연결 중…", color: "text-blue-600", dot: "bg-blue-400 animate-pulse" },
-  open: { label: "연결됨", color: "text-green-700", dot: "bg-green-400" },
-  closed: { label: "연결 끊김", color: "text-slate-500", dot: "bg-slate-400" },
-  reconnecting: { label: "재연결 중…", color: "text-yellow-600", dot: "bg-yellow-400 animate-pulse" },
-  failed: { label: "연결 실패", color: "text-red-600", dot: "bg-red-500" },
+const STATUS_CONFIG: Record<SocketStatus, { label: string; color: string; dot: string; pulse?: boolean }> = {
+  idle: { label: "대기", color: "#64748b", dot: "#cbd5e1" },
+  connecting: { label: "연결 중...", color: "#2563eb", dot: "#60a5fa", pulse: true },
+  open: { label: "연결됨", color: "#15803d", dot: "#4ade80" },
+  closed: { label: "연결 끊김", color: "#64748b", dot: "#94a3b8" },
+  reconnecting: { label: "재연결 중...", color: "#ca8a04", dot: "#facc15", pulse: true },
+  failed: { label: "연결 실패", color: "#dc2626", dot: "#ef4444" },
 };
 
 export function ConnectionStatus() {
@@ -24,12 +24,43 @@ export function ConnectionStatus() {
   const cfg = STATUS_CONFIG[status];
 
   return (
-    <div className={`flex items-center gap-1.5 text-xs font-medium ${cfg.color}`}>
-      <span className={`h-2 w-2 rounded-full ${cfg.dot}`} />
+    <StatusText $color={cfg.color}>
+      <Dot $color={cfg.dot} $pulse={Boolean(cfg.pulse)} />
       {cfg.label}
       {status === "reconnecting" && reconnectAttempts > 0 && (
-        <span className="text-slate-400">({reconnectAttempts}번째)</span>
+        <Attempts>({reconnectAttempts}번째)</Attempts>
       )}
-    </div>
+    </StatusText>
   );
 }
+
+const pulse = keyframes`
+  50% {
+    opacity: 0.35;
+  }
+`;
+
+const StatusText = styled.div<{ $color: string }>`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: ${({ $color }) => $color};
+  font-size: 12px;
+  font-weight: 500;
+`;
+
+const Dot = styled.span<{ $color: string; $pulse: boolean }>`
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: ${({ $color }) => $color};
+  ${({ $pulse }) =>
+    $pulse &&
+    css`
+      animation: ${pulse} 1.2s ease-in-out infinite;
+    `}
+`;
+
+const Attempts = styled.span`
+  color: #94a3b8;
+`;

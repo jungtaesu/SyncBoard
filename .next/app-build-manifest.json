@@ -1,35 +1,87 @@
 {
   "pages": {
+    "/(dashboard)/rooms/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(dashboard)/rooms/loading.css",
+      "static/chunks/app/(dashboard)/rooms/loading.js"
+    ],
+    "/(dashboard)/rooms/[roomId]/error": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(dashboard)/rooms/[roomId]/error.css",
+      "static/chunks/app/(dashboard)/rooms/[roomId]/error.js"
+    ],
+    "/(dashboard)/rooms/[roomId]/loading": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(dashboard)/rooms/[roomId]/loading.css",
+      "static/chunks/app/(dashboard)/rooms/[roomId]/loading.js"
+    ],
+    "/(dashboard)/rooms/[roomId]/@members/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(dashboard)/rooms/[roomId]/@members/page.css",
+      "static/chunks/app/(dashboard)/rooms/[roomId]/@members/page.js"
+    ],
+    "/(dashboard)/rooms/[roomId]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(dashboard)/rooms/[roomId]/page.css",
+      "static/chunks/app/(dashboard)/rooms/[roomId]/page.js"
+    ],
+    "/(dashboard)/rooms/[roomId]/(.)metrics/[metricId]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/(dashboard)/rooms/[roomId]/(.)metrics/[metricId]/page.js"
+    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/(dashboard)/rooms/error": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(dashboard)/rooms/error.css",
+      "static/chunks/app/(dashboard)/rooms/error.js"
+    ],
+    "/(dashboard)/rooms/[roomId]/layout": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(dashboard)/rooms/[roomId]/layout.css",
+      "static/chunks/app/(dashboard)/rooms/[roomId]/layout.js"
+    ],
+    "/(dashboard)/rooms/[roomId]/@activity/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(dashboard)/rooms/[roomId]/@activity/page.css",
+      "static/chunks/app/(dashboard)/rooms/[roomId]/@activity/page.js"
+    ],
+    "/(dashboard)/rooms/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(dashboard)/rooms/page.css",
+      "static/chunks/app/(dashboard)/rooms/page.js"
+    ],
     "/(public)/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
+      "static/css/app/(public)/layout.css",
       "static/chunks/app/(public)/layout.js"
     ],
     "/(public)/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
+      "static/css/app/(public)/page.css",
       "static/chunks/app/(public)/page.js"
     ],
-    "/(dashboard)/rooms/error": [
+    "/(dashboard)/rooms/[roomId]/metrics/[metricId]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/(dashboard)/rooms/error.js"
-    ],
-    "/(dashboard)/rooms/loading": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(dashboard)/rooms/loading.js"
-    ],
-    "/(dashboard)/rooms/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/(dashboard)/rooms/page.js"
+      "static/css/app/(dashboard)/rooms/[roomId]/metrics/[metricId]/page.css",
+      "static/chunks/app/(dashboard)/rooms/[roomId]/metrics/[metricId]/page.js"
     ],
     "/_not-found/page": [
       "static/chunks/webpack.js",

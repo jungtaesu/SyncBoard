@@ -1,0 +1,33 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/(dashboard)/rooms/error.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************/
+.error_panel__rx2rU {
+  max-width: 448px;
+  margin: 0 auto;
+  padding: 96px 0;
+  text-align: center;
+}
+
+.error_icon__ghxal {
+  color: #ef4444;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.error_title__LAuQp {
+  margin-top: 16px;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.error_message__1mnXf {
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.error_retry__6rlc9 {
+  margin-top: 24px;
+}
+

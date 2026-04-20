@@ -25,11 +25,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
-    ],
-    "/legacy/rooms/[roomId]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/legacy/rooms/[roomId].js"
     ]
   },
   "ampFirstPages": []

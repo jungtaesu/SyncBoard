@@ -1,0 +1,60 @@
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/features/issue-room/ui/LivePresence.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************/
+.LivePresence_list__WAt2n {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.LivePresence_item__oo_Pu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #334155;
+  font-size: 14px;
+}
+
+.LivePresence_avatar__pkx2y {
+  display: flex;
+  width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #e0e7ff;
+  color: #4f46e5;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.LivePresence_onlineDot__17uRD {
+  width: 8px;
+  height: 8px;
+  margin-left: auto;
+  border-radius: 999px;
+  background: #4ade80;
+}
+
+.LivePresence_empty__6njru {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/features/issue-room/ui/ParticipantsPanel.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************/
+.ParticipantsPanel_panel__iobAd {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 16px;
+}
+
+.ParticipantsPanel_title__3TLrJ {
+  margin-bottom: 12px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+

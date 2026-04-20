@@ -1,15 +1,14 @@
 /**
- * MessageComposer — Client Component
+ * MessageComposer - Client Component
  *
- * [학습 포인트]
- * 입력 상태(useState), 이벤트 핸들러(onChange/onSubmit), 브라우저 API — 모두 Client 필수.
- * WebSocket 전송은 connection-manager.send()를 호출한다.
- * 컴포넌트가 WebSocket 직접 참조하지 않는다 → 레이어 분리.
+ * styled-components 비교 예제.
+ * 입력 상태, submit 핸들러, WebSocket 전송이 있으므로 원래부터 Client Component다.
  */
 
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, type ChangeEvent, type FormEvent } from "react";
+import styled from "styled-components";
 import { send } from "@/shared/websocket/connection-manager";
 import { useRoomStore } from "@/shared/stores/room-store";
 import { useSocketStore } from "@/shared/stores/socket-store";
@@ -29,22 +28,64 @@ export function MessageComposer() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-2 pt-3 border-t border-slate-200">
-      <input
+    <Form onSubmit={handleSubmit}>
+      <Input
         type="text"
         value={text}
-        onChange={(e) => setText(e.target.value)}
+        onChange={(e: ChangeEvent<HTMLInputElement>) => setText(e.target.value)}
         disabled={!isConnected}
-        placeholder={isConnected ? "메시지를 입력하세요…" : "연결 중…"}
-        className="flex-1 rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none focus:border-indigo-400 disabled:bg-slate-50 disabled:text-slate-400"
+        placeholder={isConnected ? "메시지를 입력하세요" : "연결 중..."}
       />
-      <button
-        type="submit"
-        disabled={!isConnected || !text.trim()}
-        className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed"
-      >
+      <SendButton type="submit" disabled={!isConnected || !text.trim()}>
         전송
-      </button>
-    </form>
+      </SendButton>
+    </Form>
   );
 }
+
+const Form = styled.form`
+  display: flex;
+  gap: 8px;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 12px;
+`;
+
+const Input = styled.input`
+  flex: 1;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #0f172a;
+  font-size: 14px;
+  outline: none;
+
+  &:focus {
+    border-color: #818cf8;
+  }
+
+  &:disabled {
+    background: #f8fafc;
+    color: #94a3b8;
+  }
+`;
+
+const SendButton = styled.button`
+  border: 0;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: background 0.15s ease;
+
+  &:hover:not(:disabled) {
+    background: #4338ca;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+`;

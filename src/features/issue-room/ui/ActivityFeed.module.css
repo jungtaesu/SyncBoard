@@ -1,0 +1,44 @@
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+.empty {
+  padding: 32px 0;
+  color: #94a3b8;
+  font-size: 14px;
+  text-align: center;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: 8px;
+  background: #f8fafc;
+  padding: 8px 12px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user {
+  color: #334155;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.time {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.text {
+  color: #1e293b;
+  font-size: 14px;
+}

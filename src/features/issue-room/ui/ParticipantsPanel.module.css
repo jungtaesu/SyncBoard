@@ -1,0 +1,13 @@
+.panel {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 16px;
+}
+
+.title {
+  margin-bottom: 12px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}

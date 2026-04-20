@@ -1,0 +1,56 @@
+.page {
+  max-width: 512px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.title {
+  margin-top: 16px;
+  color: #0f172a;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.room {
+  margin-top: 4px;
+  color: #64748b;
+}
+
+.card {
+  margin-top: 24px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 24px;
+}
+
+.valueRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.value {
+  color: #0f172a;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.trendUp,
+.trendDown {
+  font-size: 30px;
+}
+
+.trendUp {
+  color: #ef4444;
+}
+
+.trendDown {
+  color: #22c55e;
+}
+
+.note {
+  margin-top: 8px;
+  color: #94a3b8;
+  font-size: 12px;
+}

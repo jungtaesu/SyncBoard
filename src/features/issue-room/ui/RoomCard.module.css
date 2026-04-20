@@ -1,0 +1,106 @@
+.card {
+  display: block;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 20px;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 1px 2px rgb(15 23 42 / 0.04);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 18px rgb(15 23 42 / 0.08);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.title {
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.statusBadge,
+.priorityBadge {
+  flex-shrink: 0;
+  border-radius: 999px;
+}
+
+.statusBadge {
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.priorityBadge {
+  padding: 2px 8px;
+}
+
+.statusOpen,
+.priorityCritical {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.statusInvestigating {
+  background: #fef3c7;
+  color: #a16207;
+}
+
+.statusResolved {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.priorityLow {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.priorityMedium {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.priorityHigh {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.priorityCritical {
+  font-weight: 700;
+}
+
+.description {
+  display: -webkit-box;
+  margin-top: 6px;
+  overflow: hidden;
+  color: #64748b;
+  font-size: 14px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.lastEvent {
+  margin-left: auto;
+}

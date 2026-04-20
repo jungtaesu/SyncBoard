@@ -1,1 +1,1 @@
-self.__INTERCEPTION_ROUTE_REWRITE_MANIFEST="[{\"source\":\"/rooms/:roomId/metrics/:metricId\",\"destination\":\"/rooms/:roomId/(.)metrics/:metricId\",\"has\":[{\"type\":\"header\",\"key\":\"Next-Url\",\"value\":\"\\\\/rooms(?:\\\\/([^\\\\/#\\\\?]+?))(?:\\\\/(.*))?[\\\\/#\\\\?]?\"}]}]"
+self.__INTERCEPTION_ROUTE_REWRITE_MANIFEST='[{"source":"/rooms/:roomId/metrics/:metricId","destination":"/rooms/:roomId/(.)metrics/:metricId","has":[{"type":"header","key":"Next-Url","value":"\\\\/rooms(?:\\\\/([^\\\\/#\\\\?]+?))(?:\\\\/(.*))?[\\\\/#\\\\?]?"}]}]';

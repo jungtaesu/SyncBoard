@@ -1,0 +1,38 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[5].use[3]!./src/app/(dashboard)/rooms/[roomId]/@activity/page.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************/
+.page_panel__Ldxk3 {
+  border: 1px solid #c7d2fe;
+  border-radius: 12px;
+  background: #eef2ff;
+  padding: 16px;
+}
+
+.page_title__Xrkxb {
+  margin-bottom: 12px;
+  color: #3730a3;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.page_title__Xrkxb span {
+  color: #818cf8;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.page_list__nMUxj {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.page_item__Gy7wu {
+  color: #4338ca;
+  font-size: 12px;
+}
+
+.page_item__Gy7wu span {
+  font-weight: 600;
+}
+

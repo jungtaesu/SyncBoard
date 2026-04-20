@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  compiler: {
+    styledComponents: true,
+  },
   // pages 디렉터리와 app 디렉터리를 함께 사용 (App Router + Pages Router 병행)
   // Next.js 15 기준으로는 기본 활성화됨
   experimental: {

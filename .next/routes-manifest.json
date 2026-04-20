@@ -1,0 +1,116 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [
+    {
+      "page": "/legacy/rooms/[roomId]",
+      "regex": "^/legacy/rooms/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtProomId": "nxtProomId"
+      },
+      "namedRegex": "^/legacy/rooms/(?<nxtProomId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/rooms/[roomId]",
+      "regex": "^/rooms/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtProomId": "nxtProomId"
+      },
+      "namedRegex": "^/rooms/(?<nxtProomId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/rooms/[roomId]/(.)metrics/[metricId]",
+      "regex": "^/rooms/([^/]+?)/\\(\\.\\)metrics/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtProomId": "nxtProomId",
+        "nxtPmetricId": "nxtPmetricId"
+      },
+      "namedRegex": "^/rooms/(?<nxtProomId>[^/]+?)/\\(\\.\\)metrics/(?<nxtPmetricId>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/rooms/[roomId]/metrics/[metricId]",
+      "regex": "^/rooms/([^/]+?)/metrics/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtProomId": "nxtProomId",
+        "nxtPmetricId": "nxtPmetricId"
+      },
+      "namedRegex": "^/rooms/(?<nxtProomId>[^/]+?)/metrics/(?<nxtPmetricId>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/rooms",
+      "regex": "^/rooms(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/rooms(?:/)?$"
+    }
+  ],
+  "dataRoutes": [
+    {
+      "page": "/legacy/rooms/[roomId]",
+      "routeKeys": {
+        "nxtProomId": "nxtProomId"
+      },
+      "dataRouteRegex": "^/_next/data/e5z8c48Ltgt4KN94QBAQR/legacy/rooms/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/e5z8c48Ltgt4KN94QBAQR/legacy/rooms/(?<nxtProomId>[^/]+?)\\.json$"
+    }
+  ],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  },
+  "rewrites": {
+    "beforeFiles": [
+      {
+        "source": "/rooms/:roomId/metrics/:metricId",
+        "destination": "/rooms/:roomId/(.)metrics/:metricId",
+        "has": [
+          {
+            "type": "header",
+            "key": "Next-Url",
+            "value": "\\/rooms(?:\\/([^\\/#\\?]+?))(?:\\/(.*))?[\\/#\\?]?"
+          }
+        ],
+        "regex": "^/rooms(?:/([^/]+?))/metrics(?:/([^/]+?))(?:/)?$"
+      }
+    ],
+    "afterFiles": [],
+    "fallback": []
+  }
+}

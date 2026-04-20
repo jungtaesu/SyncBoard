@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* IssuePulse 공통 스타일 */
+:root {
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  color: #0f172a;
+}

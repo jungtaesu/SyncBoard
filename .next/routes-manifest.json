@@ -75,8 +75,8 @@
       "routeKeys": {
         "nxtProomId": "nxtProomId"
       },
-      "dataRouteRegex": "^/_next/data/e5z8c48Ltgt4KN94QBAQR/legacy/rooms/([^/]+?)\\.json$",
-      "namedDataRouteRegex": "^/_next/data/e5z8c48Ltgt4KN94QBAQR/legacy/rooms/(?<nxtProomId>[^/]+?)\\.json$"
+      "dataRouteRegex": "^/_next/data/T0gnfv4cXoqZys5\\-7zaXv/legacy/rooms/([^/]+?)\\.json$",
+      "namedDataRouteRegex": "^/_next/data/T0gnfv4cXoqZys5\\-7zaXv/legacy/rooms/(?<nxtProomId>[^/]+?)\\.json$"
     }
   ],
   "rsc": {

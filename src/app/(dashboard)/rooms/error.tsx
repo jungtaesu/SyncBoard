@@ -7,7 +7,7 @@
 "use client";
 
 import { Button } from "@/shared/ui/Button";
-import styles from "./error.module.css";
+import styles from "./styles.module.css";
 
 export default function RoomsError({
   error,
@@ -17,11 +17,11 @@ export default function RoomsError({
   reset: () => void;
 }) {
   return (
-    <div className={styles.panel}>
-      <p className={styles.icon}>!</p>
-      <h2 className={styles.title}>룸 목록을 불러오지 못했습니다</h2>
-      <p className={styles.message}>{error.message}</p>
-      <Button onClick={reset} className={styles.retry}>
+    <div className={styles.errorPanel}>
+      <p className={styles.errorIcon}>!</p>
+      <h2 className={styles.errorTitle}>룸 목록을 불러오지 못했습니다</h2>
+      <p className={styles.errorMessage}>{error.message}</p>
+      <Button onClick={reset} className={styles.errorRetry}>
         다시 시도
       </Button>
     </div>

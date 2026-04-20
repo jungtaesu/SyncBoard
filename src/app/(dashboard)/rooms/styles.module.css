@@ -1,0 +1,98 @@
+.listPage {
+  max-width: 896px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.listHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.listTitle {
+  color: #0f172a;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.listCount {
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.roomGrid {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.emptyRooms {
+  padding: 48px 0;
+  color: #94a3b8;
+  text-align: center;
+}
+
+.listTitleSkeleton,
+.roomCardSkeleton {
+  border-radius: 12px;
+  background: #e2e8f0;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.listTitleSkeleton {
+  width: 160px;
+  height: 32px;
+  margin-bottom: 24px;
+}
+
+.roomCardSkeleton {
+  height: 144px;
+}
+
+.errorPanel {
+  max-width: 448px;
+  margin: 0 auto;
+  padding: 96px 0;
+  text-align: center;
+}
+
+.errorIcon {
+  color: #ef4444;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.errorTitle {
+  margin-top: 16px;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.errorMessage {
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.errorRetry {
+  margin-top: 24px;
+}
+
+@media (min-width: 640px) {
+  .roomGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .emptyRooms {
+    grid-column: span 2;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.55;
+  }
+}

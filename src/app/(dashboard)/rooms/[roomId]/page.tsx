@@ -14,7 +14,7 @@ import { ActivityFeed } from "@/features/issue-room/ui/ActivityFeed";
 import { MessageComposer } from "@/features/issue-room/ui/MessageComposer";
 import { RoomSocketProvider } from "@/features/issue-room/ui/RoomSocketProvider";
 import { LinkButton } from "@/shared/ui/Button";
-import styles from "./page.module.css";
+import styles from "./styles.module.css";
 
 interface Props {
   params: Promise<{ roomId: string }>;
@@ -30,15 +30,23 @@ export default async function RoomDetailPage({ params }: Props) {
 
   return (
     <RoomSocketProvider roomId={roomId} initialSnapshot={{ room, messages, members }}>
-      <div className={styles.content}>
+      <div className={styles.detailContent}>
         <RoomHeader room={room} />
         <StatusActionBar />
 
         <div className={styles.metricLinks}>
-          <LinkButton href={`/rooms/${roomId}/metrics/error-rate`} variant="secondary" className={styles.metricLink}>
+          <LinkButton
+            href={`/rooms/${roomId}/metrics/error-rate`}
+            variant="secondary"
+            className={styles.metricLink}
+          >
             Error Rate
           </LinkButton>
-          <LinkButton href={`/rooms/${roomId}/metrics/latency-p99`} variant="secondary" className={styles.metricLink}>
+          <LinkButton
+            href={`/rooms/${roomId}/metrics/latency-p99`}
+            variant="secondary"
+            className={styles.metricLink}
+          >
             Latency P99
           </LinkButton>
         </div>

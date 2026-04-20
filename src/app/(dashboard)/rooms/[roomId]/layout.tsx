@@ -7,7 +7,7 @@
 
 import { ConnectionStatus } from "@/features/issue-room/ui/ConnectionStatus";
 import { LinkButton } from "@/shared/ui/Button";
-import styles from "./layout.module.css";
+import styles from "./styles.module.css";
 
 interface Props {
   children: React.ReactNode;
@@ -17,22 +17,22 @@ interface Props {
 
 export default function RoomDetailLayout({ children, activity, members }: Props) {
   return (
-    <div className={styles.page}>
-      <div className={styles.topBar}>
+    <div className={styles.detailShell}>
+      <div className={styles.detailTopBar}>
         <LinkButton href="/rooms" variant="ghost">
           ← 목록으로
         </LinkButton>
-        <div className={styles.connection}>
+        <div className={styles.connectionStatus}>
           <ConnectionStatus />
         </div>
       </div>
 
-      <div className={styles.grid}>
-        <div className={styles.mainColumn}>
+      <div className={styles.detailGrid}>
+        <div className={styles.detailMainColumn}>
           {children}
           {activity}
         </div>
-        <div className={styles.sideColumn}>{members}</div>
+        <div className={styles.detailSideColumn}>{members}</div>
       </div>
     </div>
   );

@@ -1,12 +1,12 @@
-import styles from "./loading.module.css";
+import styles from "./styles.module.css";
 
 export default function RoomsLoading() {
   return (
-    <div className={styles.page}>
-      <div className={styles.titleSkeleton} />
-      <div className={styles.grid}>
+    <div className={styles.listPage}>
+      <div className={styles.listTitleSkeleton} />
+      <div className={styles.roomGrid}>
         {Array.from({ length: 4 }).map((_, i) => (
-          <div key={i} className={styles.cardSkeleton} />
+          <div key={i} className={styles.roomCardSkeleton} />
         ))}
       </div>
     </div>

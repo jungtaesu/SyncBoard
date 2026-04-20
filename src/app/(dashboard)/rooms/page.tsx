@@ -8,9 +8,9 @@
 
 import { fetchRoomList } from "@/features/issue-room/api";
 import { RoomCard } from "@/features/issue-room/ui/RoomCard";
-import { RoomFilter } from "./RoomFilter";
+import { RoomFilter } from "@/features/issue-room/ui/RoomFilter";
 import type { RoomStatus } from "@/shared/websocket/types";
-import styles from "./page.module.css";
+import styles from "./styles.module.css";
 
 interface SearchParams {
   status?: string;
@@ -28,20 +28,20 @@ export default async function RoomsPage({ searchParams }: Props) {
   });
 
   return (
-    <div className={styles.page}>
-      <div className={styles.header}>
-        <h1 className={styles.title}>이슈 룸</h1>
-        <span className={styles.count}>{rooms.length}개</span>
+    <div className={styles.listPage}>
+      <div className={styles.listHeader}>
+        <h1 className={styles.listTitle}>이슈 룸</h1>
+        <span className={styles.listCount}>{rooms.length}개</span>
       </div>
 
       <RoomFilter />
 
-      <div className={styles.grid}>
+      <div className={styles.roomGrid}>
         {rooms.map((room) => (
           <RoomCard key={room.id} room={room} />
         ))}
         {rooms.length === 0 && (
-          <p className={styles.empty}>조건에 맞는 룸이 없습니다.</p>
+          <p className={styles.emptyRooms}>조건에 맞는 룸이 없습니다.</p>
         )}
       </div>
     </div>

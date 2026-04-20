@@ -1,0 +1,77 @@
+.shell {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.header {
+  border-bottom: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 16px 24px;
+}
+
+.logo {
+  color: #4f46e5;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.main {
+  flex: 1;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 128px 24px;
+  text-align: center;
+}
+
+.title {
+  color: #0f172a;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.title span {
+  color: #4f46e5;
+}
+
+.description {
+  margin-top: 16px;
+  max-width: 448px;
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.actionButton,
+.legacyLink {
+  padding: 12px 24px;
+  font-weight: 600;
+}
+
+.legacyLink {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #334155;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.legacyLink:hover {
+  background: #f8fafc;
+}

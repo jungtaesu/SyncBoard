@@ -1,0 +1,180 @@
+.detailShell {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.detailTopBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.connectionStatus {
+  margin-left: auto;
+}
+
+.detailGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.detailMainColumn,
+.detailSideColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.detailMainColumn {
+  gap: 24px;
+}
+
+.detailSideColumn {
+  gap: 16px;
+}
+
+.detailContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.metricLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.metricLink {
+  padding: 6px 12px;
+}
+
+.messagePanel {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 16px;
+}
+
+.messageTitle {
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.detailLoadingStack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detailHeaderSkeleton,
+.detailActionsSkeleton,
+.detailPanelSkeleton {
+  background: #e2e8f0;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.detailHeaderSkeleton {
+  height: 80px;
+  border-radius: 12px;
+}
+
+.detailActionsSkeleton {
+  height: 40px;
+  border-radius: 8px;
+}
+
+.detailPanelSkeleton {
+  height: 256px;
+  border-radius: 12px;
+}
+
+.detailErrorPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 96px 0;
+  text-align: center;
+}
+
+.detailErrorIcon {
+  color: #ef4444;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.detailErrorTitle {
+  margin-top: 16px;
+  color: #0f172a;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.detailErrorMessage {
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.detailErrorActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.activityPanel {
+  border: 1px solid #c7d2fe;
+  border-radius: 12px;
+  background: #eef2ff;
+  padding: 16px;
+}
+
+.activityTitle {
+  margin-bottom: 12px;
+  color: #3730a3;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.activityTitle span {
+  color: #818cf8;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.activityList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.activityItem {
+  color: #4338ca;
+  font-size: 12px;
+}
+
+.activityItem span {
+  font-weight: 600;
+}
+
+@media (min-width: 1024px) {
+  .detailGrid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.55;
+  }
+}

@@ -3,8 +3,8 @@
   "/(dashboard)/rooms/page": "/rooms",
   "/(dashboard)/rooms/[roomId]/(.)metrics/[metricId]/page": "/rooms/[roomId]/(.)metrics/[metricId]",
   "/(dashboard)/rooms/[roomId]/@activity/page": "/rooms/[roomId]",
-  "/(dashboard)/rooms/[roomId]/page": "/rooms/[roomId]",
   "/(dashboard)/rooms/[roomId]/@members/page": "/rooms/[roomId]",
+  "/(dashboard)/rooms/[roomId]/page": "/rooms/[roomId]",
   "/(dashboard)/rooms/[roomId]/metrics/[metricId]/page": "/rooms/[roomId]/metrics/[metricId]",
   "/(public)/page": "/"
 }

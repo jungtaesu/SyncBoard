@@ -1,5 +1,10 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
   "/(dashboard)/rooms/page": "app/(dashboard)/rooms/page.js",
-  "/(dashboard)/rooms/[roomId]/page": "app/(dashboard)/rooms/[roomId]/page.js"
+  "/(dashboard)/rooms/[roomId]/(.)metrics/[metricId]/page": "app/(dashboard)/rooms/[roomId]/(.)metrics/[metricId]/page.js",
+  "/(dashboard)/rooms/[roomId]/@activity/page": "app/(dashboard)/rooms/[roomId]/@activity/page.js",
+  "/(dashboard)/rooms/[roomId]/@members/page": "app/(dashboard)/rooms/[roomId]/@members/page.js",
+  "/(dashboard)/rooms/[roomId]/page": "app/(dashboard)/rooms/[roomId]/page.js",
+  "/(dashboard)/rooms/[roomId]/metrics/[metricId]/page": "app/(dashboard)/rooms/[roomId]/metrics/[metricId]/page.js",
+  "/(public)/page": "app/(public)/page.js"
 }

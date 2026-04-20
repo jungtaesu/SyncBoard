@@ -4,7 +4,7 @@
  * route group `(public)`은 URL에 영향을 주지 않고 레이아웃만 분리한다.
  */
 
-import styles from "./layout.module.css";
+import styles from "./styles.module.css";
 
 export default function PublicLayout({ children }: { children: React.ReactNode }) {
   return (

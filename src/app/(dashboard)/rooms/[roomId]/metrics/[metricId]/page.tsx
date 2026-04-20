@@ -7,7 +7,7 @@
 
 import { getRoomMetrics } from "@/features/issue-room/api";
 import { LinkButton } from "@/shared/ui/Button";
-import styles from "./page.module.css";
+import styles from "./styles.module.css";
 
 interface Props {
   params: Promise<{ roomId: string; metricId: string }>;
